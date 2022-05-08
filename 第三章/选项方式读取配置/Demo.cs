@@ -7,6 +7,7 @@ class Demo
 	public Demo(IOptionsSnapshot<DbSettings> optDbSettings,
 		IOptionsSnapshot<SmtpSettings> optSmtpSettings)
 	{
+		//note: get IOptionsSnapshot rather than get the value directly, so to it can help with reload data if change exists
 		this.optDbSettings = optDbSettings;
 		this.optSmtpSettings = optSmtpSettings;
 	}
